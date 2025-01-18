@@ -14,8 +14,19 @@ func RegisterRoutes(r *gin.Engine) {
 	// API v1
 	v1Group := r.Group("/api/v1")
 	{
-		// 添加路由
+		// Health check
 		v1Group.GET("/health", v1.HealthCheck)
-		// TODO: 添加更多路由
+
+		// User routes
+		userHandler := v1.NewUserHandler()
+		v1Group.POST("/register", userHandler.Register)
+		v1Group.POST("/login", userHandler.Login)
+
+		// Protected routes
+		auth := v1Group.Group("")
+		auth.Use(middleware.Auth())
+		{
+			// Add protected routes here later
+		}
 	}
 }

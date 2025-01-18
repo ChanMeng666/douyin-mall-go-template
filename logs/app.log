@@ -1,0 +1,6 @@
+{"level":"INFO","ts":"2025-01-18T16:19:04.711+1300","caller":"middleware/logger.go:19","msg":"access log","path":"/","query":"","ip":"::1","method":"GET","status":404,"latency":0}
+{"level":"INFO","ts":"2025-01-18T16:19:04.977+1300","caller":"middleware/logger.go:19","msg":"access log","path":"/favicon.ico","query":"","ip":"::1","method":"GET","status":404,"latency":0}
+{"level":"INFO","ts":"2025-01-18T17:18:56.233+1300","caller":"middleware/logger.go:19","msg":"access log","path":"/api/v1/register","query":"","ip":"::1","method":"POST","status":400,"latency":0}
+{"level":"INFO","ts":"2025-01-18T17:21:20.096+1300","caller":"middleware/logger.go:19","msg":"access log","path":"/api/v1/register","query":"","ip":"::1","method":"POST","status":200,"latency":0.090421}
+{"level":"INFO","ts":"2025-01-18T17:27:09.914+1300","caller":"middleware/logger.go:19","msg":"access log","path":"/api/v1/login","query":"","ip":"::1","method":"POST","status":200,"latency":0.0633906}
+{"level":"INFO","ts":"2025-01-18T17:34:48.238+1300","caller":"middleware/logger.go:19","msg":"access log","path":"/api/v1/login","query":"","ip":"::1","method":"POST","status":200,"latency":0.0584294}

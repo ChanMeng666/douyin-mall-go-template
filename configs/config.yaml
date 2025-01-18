@@ -7,8 +7,11 @@ database:
   host: localhost
   port: 3306
   username: root
-  password: root
-  dbname: your_db_name
+  password: your_password
+  dbname: douyin_mall_go_template
+  max_idle_conns: 10
+  max_open_conns: 100
+  conn_max_lifetime: 3600
 
 redis:
   host: localhost
