@@ -1,0 +1,27 @@
+server:
+  port: 8080
+  mode: development
+
+database:
+  driver: mysql
+  host: localhost
+  port: 3306
+  username: root
+  password: your_password
+  dbname: douyin_mall_go_template
+  max_idle_conns: 10
+  max_open_conns: 100
+  conn_max_lifetime: 3600
+
+redis:
+  host: localhost
+  port: 6379
+  password: ""
+  db: 0
+
+log:
+  level: debug
+  filename: ./logs/app.log
+  maxsize: 100
+  maxage: 7
+  maxbackups: 10
