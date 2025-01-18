@@ -1,0 +1,9 @@
+/* File: public/css/style.css */
+.loading {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.error {
+    border-color: #f56565;
+}

@@ -4,3 +4,6 @@
 {"level":"INFO","ts":"2025-01-18T17:21:20.096+1300","caller":"middleware/logger.go:19","msg":"access log","path":"/api/v1/register","query":"","ip":"::1","method":"POST","status":200,"latency":0.090421}
 {"level":"INFO","ts":"2025-01-18T17:27:09.914+1300","caller":"middleware/logger.go:19","msg":"access log","path":"/api/v1/login","query":"","ip":"::1","method":"POST","status":200,"latency":0.0633906}
 {"level":"INFO","ts":"2025-01-18T17:34:48.238+1300","caller":"middleware/logger.go:19","msg":"access log","path":"/api/v1/login","query":"","ip":"::1","method":"POST","status":200,"latency":0.0584294}
+{"level":"INFO","ts":"2025-01-18T23:35:56.354+1300","caller":"middleware/logger.go:19","msg":"access log","path":"/","query":"","ip":"::1","method":"GET","status":404,"latency":0.0021747}
+{"level":"INFO","ts":"2025-01-18T23:36:16.865+1300","caller":"middleware/logger.go:19","msg":"access log","path":"/","query":"","ip":"::1","method":"GET","status":404,"latency":0}
+{"level":"INFO","ts":"2025-01-18T23:36:17.657+1300","caller":"middleware/logger.go:19","msg":"access log","path":"/","query":"","ip":"::1","method":"GET","status":404,"latency":0}

@@ -1,32 +1,44 @@
+// File: internal/routes/routes.go
 package routes
 
 import (
 	"douyin-mall-go-template/api/v1"
 	"douyin-mall-go-template/internal/middleware"
 	"github.com/gin-gonic/gin"
+	"net/http"
 )
 
 func RegisterRoutes(r *gin.Engine) {
-	// 中间件
-	r.Use(middleware.Logger())
-	r.Use(middleware.Cors())
+	// Serve static files
+	r.Static("/public", "./public")
+	r.LoadHTMLGlob("public/pages/*.html") // Changed from *.jsx to *.html
 
-	// API v1
+	// Frontend routes
+	r.GET("/", func(c *gin.Context) {
+		c.Redirect(http.StatusMovedPermanently, "/login")
+	})
+
+	r.GET("/login", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "login.html", nil) // Changed from Login.jsx
+	})
+
+	r.GET("/register", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "register.html", nil) // Changed from Register.jsx
+	})
+
+	// API routes
 	v1Group := r.Group("/api/v1")
 	{
-		// Health check
 		v1Group.GET("/health", v1.HealthCheck)
 
-		// User routes
 		userHandler := v1.NewUserHandler()
 		v1Group.POST("/register", userHandler.Register)
 		v1Group.POST("/login", userHandler.Login)
 
-		// Protected routes
 		auth := v1Group.Group("")
 		auth.Use(middleware.Auth())
 		{
-			// Add protected routes here later
+			// Protected routes here
 		}
 	}
 }
