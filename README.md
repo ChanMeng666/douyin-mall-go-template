@@ -258,10 +258,6 @@ We welcome contributions! Please follow these steps:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-好的,我会帮你美化这段markdown代码,添加LinkedIn和GitHub的图标。我会使用SVG格式的图标。
-
-
-
 ## 🙋‍♀ Author
 **Chan Meng**
 - <img src="https://cdn.simpleicons.org/linkedin/0A66C2" width="16" height="16"> LinkedIn: [chanmeng666](https://www.linkedin.com/in/chanmeng666/)
@@ -274,4 +270,3 @@ Made with ❤️ for Go learners
 <br/>
 ⭐ Star us on GitHub | 📖 Read the Wiki | 🐛 Report an Issue
 </div>
-
