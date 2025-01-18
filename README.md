@@ -31,18 +31,19 @@ A comprehensive production-ready e-commerce backend template built with Go, desi
 
 ## 📚 Table of Contents
 
-- [Features Overview](#features-overview)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
+- [Features Overview](#-features-overview)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Configuration](#configuration)
-- [API Documentation](#api-documentation)
-- [Development Guide](#development-guide)
-- [Database Schema](#database-schema)
-- [Contributing](#contributing)
-- [License](#license)
+- [API Documentation](#-api-documentation)
+- [Development Guide](#-development-guide)
+- [Database Schema](#-database-schema)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Author](#-author)
 
 ## 🛠️ Tech Stack
 
