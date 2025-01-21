@@ -1,5 +1,5 @@
 <div align="center">
- <h1>🛍️ Go E-commerce Project Template<br/><small>A Production-Ready Educational Template</small></h1>
+ <h1>🛍️ TikTok Shop Go<br/><small>A Production-Ready Educational Template</small></h1>
  <img src="https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white"/>
  <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"/>
  <img src="https://img.shields.io/badge/gin-%23008ECF.svg?style=for-the-badge&logo=gin&logoColor=white"/>
@@ -85,6 +85,207 @@ A comprehensive production-ready e-commerce backend template built with Go, desi
 > [!TIP]
 > Each component in our tech stack was chosen for its reliability and widespread adoption in production environments. See our [docs](docs/) for detailed information about each technology.
 
+
+
+## 📱 Frontend Implementation
+
+This project demonstrates two different approaches to frontend implementation, showcasing the evolution from a simple HTML/JS/CSS stack to a modern React application. Both implementations are provided for educational purposes.
+
+### Version 1: HTML/JS/CSS Implementation
+
+The first version demonstrates fundamental web development concepts using vanilla HTML, JavaScript, and CSS.
+
+#### Structure
+```
+public/
+  ├── pages/           # HTML pages
+  │   ├── login.html
+  │   └── register.html
+  ├── css/            # Styling
+  │   └── style.css
+  └── js/             # Client-side logic
+      ├── login.js
+      └── register.js
+```
+
+#### Key Features
+- Pure HTML/JS/CSS implementation
+- No build process required
+- Direct integration with Go backend
+- Simple state management
+- Form validation using HTML5 attributes
+- Basic error handling
+- Tailwind CSS for styling
+
+#### Running Version 1
+1. No build step required
+2. Start Go server:
+```bash
+go run cmd/server/main.go
+```
+3. Access http://localhost:8080
+
+### Version 2: React Implementation
+
+The second version upgrades to a modern React application with enhanced features and better development experience.
+
+#### Structure
+```
+frontend/
+  ├── src/
+  │   ├── components/    # Reusable React components
+  │   ├── pages/         # Page components
+  │   ├── services/      # API services
+  │   └── utils/         # Utility functions
+  ├── package.json
+  └── vite.config.js
+```
+
+#### Key Features
+- Modern React with Hooks
+- Vite build system
+- Component-based architecture
+- Centralized state management
+- Enhanced routing with react-router-dom
+- Advanced form handling
+- Axios for API requests
+- Tailwind CSS integration
+
+#### Running Version 2
+1. Install dependencies:
+```bash
+cd frontend
+npm install
+```
+
+2. Development mode:
+```bash
+npm run dev    # Starts Vite dev server
+go run cmd/server/main.go  # Start backend in another terminal
+```
+
+3. Production build:
+```bash
+npm run build
+go run cmd/server/main.go
+```
+
+### Comparison and Insights
+
+#### Development Experience
+- **Version 1 (HTML/JS/CSS)**
+  - Quick to start
+  - No build process
+  - Simple debugging
+  - Suitable for learning basics
+  - Limited code reusability
+
+- **Version 2 (React)**
+  - Modern development environment
+  - Hot module replacement
+  - Component reusability
+  - Better state management
+  - Enhanced developer tools
+
+#### Performance Considerations
+- **Version 1**
+  - Lighter initial payload
+  - No JavaScript framework overhead
+  - Direct DOM manipulation
+
+- **Version 2**
+  - Optimized bundle size
+  - Virtual DOM for efficient updates
+  - Better caching capabilities
+  - Lazy loading support
+
+#### Backend Integration
+- **Version 1**
+  - Direct fetch API calls
+  - Simple error handling
+  - Basic CORS setup
+
+- **Version 2**
+  - Axios for requests
+  - Interceptors for auth
+  - Centralized API services
+  - Enhanced error handling
+
+### Development Tips
+
+#### Common Challenges
+1. **CORS Issues**
+   - Ensure correct CORS middleware configuration
+   - Check request headers in browser dev tools
+   - Verify API endpoints
+
+2. **Authentication Flow**
+   - Store JWT token securely
+   - Handle token expiration
+   - Implement proper logout
+
+3. **Form Handling**
+   - Version 1: Use HTML5 validation
+   - Version 2: Implement controlled components
+
+#### Best Practices
+1. **Error Handling**
+```javascript
+// Version 1
+fetch('/api/v1/login', {
+  // ... fetch config
+}).catch(error => {
+  document.getElementById('error').textContent = error.message;
+});
+
+// Version 2
+try {
+  await loginService.login(credentials);
+} catch (error) {
+  setError(error.response?.data?.message || 'Login failed');
+}
+```
+
+2. **API Integration**
+```javascript
+// Version 1
+const response = await fetch('/api/v1/register', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(formData)
+});
+
+// Version 2
+const authService = {
+  register: async (userData) => {
+    const response = await http.post('/api/v1/register', userData);
+    return response.data;
+  }
+};
+```
+
+### Learning Path Recommendations
+
+1. Start with Version 1 to understand:
+   - Basic HTML structure
+   - Form handling
+   - API integration
+   - Simple state management
+
+2. Move to Version 2 to learn:
+   - React components
+   - Hooks and state management
+   - Modern build tools
+   - Advanced routing
+
+3. Compare implementations to understand:
+   - Code organization
+   - State management approaches
+   - API integration patterns
+   - Build and deployment processes
+
+
+
 ## 📂 Project Structure
 
 ```
@@ -104,6 +305,14 @@ douyin-mall-go-template/
 │   ├── db/             # Database utilities
 │   ├── logger/         # Logging utilities
 │   └── utils/          # Common utilities
+├── frontend/
+│   ├── src/
+│   │   ├── components/    # Reusable React components
+│   │   ├── pages/         # Page components
+│   │   ├── services/      # API services
+│   │   └── utils/         # Utility functions
+│   ├── package.json
+│   └── vite.config.js
 └── public/             # Static assets
 ```
 
