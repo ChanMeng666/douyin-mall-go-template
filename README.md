@@ -33,6 +33,12 @@ A comprehensive production-ready e-commerce backend template built with Go, desi
 
 - [Features Overview](#-features-overview)
 - [Tech Stack](#-tech-stack)
+- [Frontend Implementation](#-frontend-implementation)
+  - [Version 1: HTML/JS/CSS Implementation](#version-1-htmljscss-implementation)
+  - [Version 2: React Implementation](#version-2-react-implementation)
+  - [Comparison and Insights](#comparison-and-insights)
+  - [Development Tips](#development-tips)
+  - [Learning Path Recommendations](#learning-path-recommendations)
 - [Project Structure](#-project-structure)
 - [Getting Started](#-getting-started)
   - [Prerequisites](#prerequisites)
