@@ -8,6 +8,9 @@
 > [!IMPORTANT]
 > This is a template project intended for educational purposes. While it demonstrates production-ready practices, please thoroughly review and enhance security measures before deploying to production.
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
+
 # 🌟 Introduction
 
 A comprehensive production-ready e-commerce backend template built with Go, designed specifically as a learning resource for Go beginners. This project demonstrates industry-standard practices in Go web development using modern tools and frameworks.
@@ -472,7 +475,7 @@ We welcome contributions! Please follow these steps:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache-2.0 License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙋‍♀ Author
 **Chan Meng**
