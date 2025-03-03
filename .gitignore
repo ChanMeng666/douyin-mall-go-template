@@ -21,3 +21,11 @@
 go.work
 /.idea
 configs/config.yaml
+
+# Frontend
+frontend/node_modules
+frontend/package-lock.json
+frontend/yarn.lock
+
+
+
